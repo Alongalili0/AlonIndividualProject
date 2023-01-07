@@ -1,7 +1,5 @@
-# The chess AI
+# The Factory tycoon
 
-Creating at least the AI part of a chess game. I am probably going to create all the moves the AI creates as a terminal output. 
+The game is a tycoon game where you can have challanges to risk your money to double it, but if you lose the problems all your money dissapears. The problems are going to be mostly math related. 
 
-Graphic:
 
-![](chessAi.jpg)
