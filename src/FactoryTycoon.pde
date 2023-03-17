@@ -50,11 +50,11 @@ void draw() {
     break;
   case 3: // play screen
     textAlign(CENTER);
-    textSize(15);
+    textSize(20);
     fill(255);
-    text("Instructions: The goal of the game is to get to 1 Million Dollars in your Tycoon." +
-    "You can buy calculus questions which double your money." +
-    "However if you get it wrong then you will lose all your money. GOOD LUCK CEO!", width/2, 150);
+    text("Instructions:" + " \n" + "The goal of the game is to get to 1 Million Dollars in your Tycoon." +  "\n"  +
+    "You can buy calculus questions which double your money." +  "\n" +
+    "However if you get it wrong then you will lose all your money."  +  "\n" + "GOOD LUCK CEO!", width/2, 150);
     c.display();
     Instructions.display();
     break;
