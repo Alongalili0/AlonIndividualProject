@@ -17,4 +17,11 @@ class CEO {
     fill(0);
     text("Money: "+ Money + " Upgrade " + Upgrade + " Rate of money per second " + rateOfMoney, width/2, 50);
   }
+  
+  void display(){
+    fill(255);
+    textSize(25);
+     text("Welcome " + Name, width/2 - 137,height/2);
+      
+  }
 }
