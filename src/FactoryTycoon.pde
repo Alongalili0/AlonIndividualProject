@@ -1,5 +1,6 @@
 // Alon Galili || JANUARY 2
 
+
 int currentScreen = 0; // 0 = home, 1 = add questions, 2 = report
 int fade = 255; // fade effect
 String[] lines;
@@ -10,6 +11,13 @@ Button Instructions;
 PFont font;
 CEO c;
 
+import java.util.Scanner;
+Scanner name = new Scanner(System.in);
+// Variable to store text currently being typed
+String typing = "";
+
+// Variable to store saved text when return is hit
+String saved = "";
 
 void setup() {
   background(0);
@@ -24,6 +32,7 @@ void setup() {
 }
 
 void draw() {
+
   fill(255);
   textSize(128);
   background(0);
@@ -50,14 +59,17 @@ void draw() {
     break;
   case 3: // play screen
     textAlign(CENTER);
-    textSize(15);
+    textSize(20);
     fill(255);
-    text("Instructions: The goal of the game is to get to 1 Million Dollars in your Tycoon." +
-    "You can buy calculus questions which double your money." +
-    "However if you get it wrong then you will lose all your money. GOOD LUCK CEO!", width/2, 150);
-    c.display();
+    text("Instructions:" + " \n" + "The goal of the game is to get to 1 Million Dollars in your Tycoon." +  "\n"  +
+    "You can buy calculus questions which double your money." +  "\n" +
+    "However if you get it wrong then you will lose all your money."  +  "\n" + "GOOD LUCK CEO!", width/2, 150);
     Instructions.display();
     break;
+  case 4: 
+  background(0);
+   c.display();
+  break;
   }
   // Draw the fade effect
   fill(0, 0, 0, fade);
@@ -74,18 +86,18 @@ public void mouseClicked(MouseEvent event) {
     if (playButton.isMouseOver()) {
       currentScreen =3;
       fade = 255;
-      // Clicked the Play button
-      // TODO: Implement play functionality
     } else if (addQuestionButton.isMouseOver()) {
-      // Clicked the Add Questions button
       currentScreen = 1;
       fade = 255;
     } else if (reportButton.isMouseOver()) {
       // Clicked the Report button
       currentScreen = 2;
       fade = 255;
-    }else if(currentScreen ==3){
-        c.Money ++;
+    }
+  } else if(currentScreen == 3){
+    if(Instructions.isMouseOver()){
+        currentScreen =4;
+      fade = 255;
     }
   }
 }
