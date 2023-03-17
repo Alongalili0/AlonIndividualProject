@@ -52,7 +52,9 @@ void draw() {
     textAlign(CENTER);
     textSize(15);
     fill(255);
-    text("Instructions: The goal of the game is to get to 1 Million Dollars in your Tycoon. You can buy calculus questions which double your money. However if you get it wrong then you will lose all your money. GOOD LUCK CEO!", width/2, 150);
+    text("Instructions: The goal of the game is to get to 1 Million Dollars in your Tycoon." +
+    "You can buy calculus questions which double your money." +
+    "However if you get it wrong then you will lose all your money. GOOD LUCK CEO!", width/2, 150);
     c.display();
     Instructions.display();
     break;
